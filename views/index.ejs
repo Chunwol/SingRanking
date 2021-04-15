@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>Sing</title>
+    <link rel="stylesheet" href="public/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="public/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="public/assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="public/assets/css/header.css">
+    <link rel="stylesheet" href="public/assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="public/assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="public/assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/76a804cd8e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <div class ="Header">
+            <div class ="HeaderNav">                                   
+                <div class ="HeaderNavHome">                                   
+                    HOME
+                </div>
+                <div class ="HeaderNavMenu1">                                   
+                    <div id = "HeaderNavMenu_1_1" class ="HeaderNavMenu_1 Menu1">                                   
+                        KPOP
+                    </div>
+                    <div id = "HeaderNavMenu_2_1" class ="HeaderNavMenu_2 Menu1">                                   
+                        JPOP
+                    </div>
+                    <div id = "HeaderNavMenu_3_1" class ="HeaderNavMenu_3 Menu1">                                   
+                        POP
+                    </div>
+                    <div class ="HeaderNavMenuIcon">                                   
+                        <i class="fas fa-bars fa-lg"></i>
+                    </div>
+                    <div class="page_cover"></div>
+                    <div id="menu">
+                        <div class ="HeaderNavMenu2">        
+                            <div id = "HeaderNavMenu_1_2" class ="HeaderNavMenu_1 Menu2">                                   
+                                KPOP
+                            </div>
+                            <div id = "HeaderNavMenu_2_2" class ="HeaderNavMenu_2 Menu2">                                   
+                                JPOP
+                            </div>
+                            <div id = "HeaderNavMenu_3_2" class ="HeaderNavMenu_3 Menu2">                                   
+                                POP
+                            </div>
+                        </div>
+                        <div class="close">
+                            <i class="fas fa-times fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <main>
+        <div class="table-responsive d-flex justify-content-center" style="color: rgb(33, 37, 41);text-align: center;">
+            <table class="table">
+                <thead class="justify-content-center" style="border-bottom-style: none;">
+                    <tr class="d-flex justify-content-center" style="border-bottom-style: none;">
+                        <th class="text-center" style="min-width: 60px;max-width: 100px;width: 100%;">랭킹</th>
+                        <th style="max-width: 400px;min-width: 150px;width: 100%;">곡 제목</th>
+                        <th style="width: 100%;min-width: 100px;max-width: 300px;">가수</th>
+                        <th style="max-width: 150px;min-width: 75px;width: 100%;">TJ번호</th>
+                    </tr>
+                </thead>
+                <tbody class="justify-content-center">
+                    <% for(let i=0;i<tj.length;i++){ %>
+                        <tr class="d-flex justify-content-center">
+                            <td style="min-width: 60px;max-width: 100px;width: 100%; display:flex; flex-wrap:wrap; justify-content: center; align-items: center;  white-space: normal; word-break: break-word;"><%= tj[i].rank %></td>
+                            <td style="min-width: 150px;max-width: 400px;width: 100%; display:flex; flex-wrap:wrap; justify-content: center; align-items: center; white-space: normal; word-break: break-word;"><a href=<%= "https://www.youtube.com/results?search_query="+ tj[i].name.replace(/\s/g,'+').replace("/++/g","+").replace(/ *\([^)]*\) */g, "") +"+cover"%> ><%= tj[i].name %></a></td>
+                            <td style="width: 100%;min-width: 100px;max-width: 300px; display:flex; flex-wrap:wrap; justify-content: center; align-items: center; white-space: normal; word-break: break-word;"><%= tj[i].singer %></td>
+                            <td style="min-width: 75px;max-width: 150px;width: 100%; display:flex; flex-wrap:wrap; justify-content: center; align-items: center; white-space: normal; word-break: break-word;"><%= tj[i].number %></td>
+                        </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="footer-basic">
+        <div class="social">
+            <a href="#"><i class="icon ion-social-twitter"></i></a>
+            <a href="#"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        
+        <p class="copyright">Chunwol © 2021</p>
+    </footer>
+    <script src="public/assets/js/jquery.min.js"></script>
+    <script src="public/assets/js/header.js"></script>
+    <script src="public/assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

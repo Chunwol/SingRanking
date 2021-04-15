@@ -1,0 +1,145 @@
+@media(max-width:700px){
+    .Menu1{
+       display: none;
+    }
+    .Menu2{
+      font-family: 'JSDongkang-Regular';
+       font-size: large;
+       color: black;
+       margin-bottom: 30px;
+       padding-left: 20px;
+       text-align: left;
+       
+   }
+   }
+   @media(min-width:700px){
+    .HeaderNavMenuIcon{
+       display: none;
+    }
+    .Menu2{
+       display: none;
+    }
+    .Menu1{
+      font-family: 'JSDongkang-Regular';
+       font-size: large;
+       margin: 0px 25px 0px;
+       color: rgb(239, 0, 124);
+   }
+    
+   }
+   
+   
+   .Header{
+      z-index: 3;
+       background-color: white;
+       position: sticky;
+       top: 0;
+       width: 100%;
+       height: 75px;
+       display: flex;
+       justify-content: center;
+   }
+   .HeaderNav{
+       max-width: 1200px;
+       width: 100%;
+       height: auto;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+   
+   }
+   
+   .HeaderNavHome{
+    font-family: 'ImcreSoojin';
+       font-size: x-large;
+       margin: 0px 0px 0px 20px;
+       color: #6DB8BD;
+   }
+   
+   .HeaderNavMenu1{
+       display: flex;
+       flex-direction: row;
+       margin: 0px 20px 0px 0px;
+   }
+   /*
+   .HeaderNavMenu_1{
+       opacity: 0.6;
+   }
+   */
+   
+   
+     
+   .HeaderNavMenuIcon {
+       z-index: 1;
+     }
+     
+     .close {
+       width: auto;
+       height: auto;
+       position: absolute;
+       right: 10px;
+       top: 10px;
+      
+       cursor: pointer;
+     }
+     
+     #menu {
+       width: 80%;
+       height: 100%;
+       position: fixed;
+       top: 0px;
+       left: -100%;
+       z-index: 10;
+       border: 1px solid #c9c9c9;
+       background-color: white;
+       text-align: center;
+       transition: All 0.2s ease;
+       -webkit-transition: All 0.2s ease;
+       -moz-transition: All 0.2s ease;
+       -o-transition: All 0.2s ease;
+     }
+     
+     .HeaderNavMenu2{
+       display: flex;
+       align-content: center;
+   
+       flex-wrap: wrap;
+       height: 200px;
+       width: min-content;
+       margin-top: 10px;
+   }
+   
+     #menu.open {
+       left: 0px;
+     }
+     
+     .page_cover.open {
+       display: block;
+     }
+     
+     .page_cover {
+       width: 100%;
+       height: 100%;
+       position: fixed;
+       top: 0px;
+       left: 0px;
+       background-color: rgba(0, 0, 0, 0.4);
+       z-index: 4;
+       display: none;
+     }
+   
+
+     /* PC 카카오톡 상담 버튼 스타일 */
+.floBanPc1 {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 4;
+  
+}
+.KakaoImage{
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}

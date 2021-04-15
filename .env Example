@@ -1,0 +1,10 @@
+DB_HOST=127.0.0.1
+DB_PORT=3306
+
+DB_NAME=Mysql
+
+DB_USER=root
+DB_PW=aa030215
+
+WEB_HOST=chunwol.xyz
+WEB_PORT=3000
